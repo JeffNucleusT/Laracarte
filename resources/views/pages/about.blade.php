@@ -1,7 +1,7 @@
 @extends('layouts.default', ['title' => 'About'])
 
 @section('content')
-    <div class="container pt-4">
+    <section class="container pt-4">
         <h2>What is {{ config('app.name') }}?</h2>
         <p>{{ config('app.name') }} is a clone app of <a href="https://laramap.com">Laramap.com</a>.</p>
 
@@ -37,5 +37,5 @@
             <li>Michel Fortin's Markdown Parser Package</li>
             <li>Heroku</li>
         </ul>
-    </div>
+    </section>
 @endsection
