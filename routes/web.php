@@ -1,5 +1,7 @@
 <?php
 
+use App\Mail\ContactMessageCreated;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,14 @@
 |
 */
 
-Route::get('/', 'PageController@home')->name('home_path');
+Route::get('/', 'PageController@home')->name('home');
 
-Route::get('/about', 'PageController@about')->name('about_path');
+Route::get('/about', 'PageController@about')->name('about');
 
-Route::get('/contact', 'ContactController@create')->name('contact_path');
+Route::get('/contact', 'ContactController@create')->name('contact.create');
+
+Route::post('/contact', 'ContactController@store')->name('contact.store');
+
+Route::get('/email-test', function () {
+    return new ContactMessageCreated("Jeff ngnoulaye", "jr@fg.com", "doi jskdjksjd izueiijfkjd");
+});

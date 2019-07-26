@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-    <a class="navbar-brand" href="{{ route('home_path') }}">{{ config('app.name') }}</a>
+    <a class="navbar-brand" href="{{ route('home') }}">{{ config('app.name') }}</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item {{ set_active_route('home_path') }}">
-                <a class="nav-link" href="{{ route('home_path') }}">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item {{ set_active_route('home') }}">
+                <a class="nav-link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item {{ set_active_route('about_path') }}">
-                <a class="nav-link" href="{{ route('about_path') }}">About</a>
+            <li class="nav-item {{ set_active_route('about') }}">
+                <a class="nav-link" href="{{ route('about') }}">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Artisans</a>
@@ -28,8 +28,8 @@
                     <a class="dropdown-item" href="https://larachat.co" target="_blank">Larachat</a>
                 </div>
             </li>
-            <li class="nav-item {{ set_active_route('contact_path') }}">
-                <a class="nav-link" href="{{ route('contact_path') }}">Contact</a>
+            <li class="nav-item {{ set_active_route('contact.create') }}">
+                <a class="nav-link" href="{{ route('contact.create') }}">Contact</a>
             </li>
         </ul>
         <ul class="navbar-nav">
