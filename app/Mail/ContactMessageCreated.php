@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\Message;
 
-class ContactMessageCreated extends Mailable
+class ContactMessageCreated extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -31,6 +31,7 @@ class ContactMessageCreated extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.message.created');
+        return $this->from($this->message->email, $this->message->name)
+            ->markdown('email.message.created');
     }
 }
