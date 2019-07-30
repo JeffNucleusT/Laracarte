@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ page_title($title ?? '') }}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa22834e6d.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -15,6 +15,7 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif !important;
+            padding-top: 6rem;
         }
 
         footer {
@@ -39,7 +40,7 @@
     <script>
         $(function () {
             $('#flash-overlay-modal').modal();
-            $('div.alert').not('.alert-important').delay(5000).fadeOut(350);
+            $('div.alert-flash').not('.alert-important').delay(5000).fadeOut(350);
         });
     </script>
 </body>

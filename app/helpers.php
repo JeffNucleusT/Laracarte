@@ -5,11 +5,7 @@ if (! function_exists('page_title')) {
     {
         $pred = config('app.name') . ' - List of artisans';
 
-        if ($title === '') {
-            return $pred;
-        } else {
-            return $title . ' | ' . $pred;
-        }
+        return ($title === '') ? $pred : $title . ' | ' . $pred;
     }
 }
 

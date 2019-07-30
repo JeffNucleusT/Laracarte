@@ -1,13 +1,13 @@
 @extends('layouts.default', ['title' => 'About'])
 
 @section('content')
-    <section class="container pt-4">
+    <section class="container">
         <h2>What is {{ config('app.name') }}?</h2>
         <p>{{ config('app.name') }} is a clone app of <a href="https://laramap.com">Laramap.com</a>.</p>
 
         <div class="alert alert-warning w-75" role="alert">
             <strong>
-                <i class="fa fa-exclamation-triangle"></i>
+                <i class="fas fa-exclamation-circle"></i>
                 This app has been build by <a href="https://twitter.com/jeffzercreative" class="alert-link" target="_blank">@jeffzercreative</a> for learning purposes.
             </strong>
         </div>

@@ -1,16 +1,16 @@
 @extends('layouts.default', ['title' => 'Contact'])
 
 @section('content')
-    <section class="container pt-4">
-        <div class="d-flex flex-column align-items-center">
-            <div class="w-50">
+    <section class="container">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 col-xl-6 mx-auto">
                 <h2>Get In Touch</h2>
                 <p class="text-muted">
                     If you having trouble with this service, please <a href="mailto:{{ config('laracarte.admin_support_email') }}">ask for help</a>
                 </p>
 
                 <form action="{{ route('contact.store') }}" method="POST">
-                    {{ csrf_field() }}
+                    @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control {{ ($errors->has('name')) ? 'is-invalid' : '' }}" name="name" placeholder="Enter your name" value="{{ old('name') }}" required>
